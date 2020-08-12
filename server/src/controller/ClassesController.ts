@@ -93,4 +93,10 @@ export default class ClassesController {
             })
         }
     }
+
+    async getclasses(request: Request, response: Response) {
+        const classes = await db("classes")
+
+        return response.json(classes)
+    }
 }
